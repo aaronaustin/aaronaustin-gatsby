@@ -1,0 +1,67 @@
+@import "../../theme/_vars";
+
+.container {
+    position: relative;
+    background-color: #000;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateY(0);
+        transition: transform .25s;
+        h1 {
+            color: #fff;
+            text-shadow: 0 0 10px #000;
+            font-family: "Oswald";
+            text-transform: uppercase;
+        }
+        &.hide {
+            transform: translateY(-100%);
+        }
+    }
+    
+    &.on {
+        .videoBorder {
+            opacity:1;
+            .videoWrapper {
+                opacity:1;
+            }
+        }
+        :global(.gatsby-image-wrapper) {
+            opacity:0;
+        }
+    }
+    .videoBorder {
+        // max-height: 0;
+        opacity:0;
+        max-width: 640px;
+        margin:auto;
+        background-color: #000;
+        transition: max-height 1s;
+        .videoWrapper {
+            opacity:0;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            transition: opacity 1s;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    :global(.gatsby-image-wrapper) {
+        position: absolute;
+        opacity: 1;
+        transition: opacity 1s;
+    }
+}

@@ -1,0 +1,64 @@
+
+$primary-color:           #12aa96;
+$black:                   #000000;
+$gray:                    #cccccc;
+$gray-background:         #eeeeee;
+$gray-text:               #999999;
+$text-color:              rgba(0, 0, 0, 0.8);
+$footer-color:             $primary-color;
+$footer-link-color:       #ffffff;
+
+$red:                     #aa1212;
+$green:                   $primary-color;
+$purple:                  #6a2592;
+$yellow:                  #F5B700;
+$blue:                    #1266aa;
+
+
+$basic-shadow:            0 1px 3px rgba(0,0,0,.25);
+$big-shadow:              0 4px 12px 1px rgba(0,0,0,.25);
+$hover-shadow:            0px 7px 16px 4px rgba(0,0,0,.25);
+$text-shadow:             2px 2px 2px #000;
+
+//NAVBAR
+$navbar-max-width:        1200px;
+$navbar-height:           56px;
+
+//CONTENT
+$content-max-width:       740px;
+$hero-max-width:          599px;
+$card-content-max-width:  920px;
+$header-max-width:        1080px;
+
+
+//BREAKPOINTS
+$screen-xs:     450px;
+$screen-sm:     576px;
+$screen-md:     768px;
+$screen-lg:     992px;
+$screen-xl:     1200px;
+$screen-max:    1366px;
+
+//PADDING
+$nav-side-padding: 1rem;
+
+//BREAKPOINTS
+@mixin xs {
+  @media (max-width: $screen-sm - 1) { @content; }
+}
+@mixin sm {
+  @media (min-width: $screen-sm) { @content; }
+}
+@mixin md {
+  @media (min-width: $screen-md) { @content; }
+}
+@mixin lg {
+  @media (min-width: $screen-lg) { @content; }
+}
+@mixin xl {
+  @media (min-width: $screen-xl) { @content; }
+}
+
+
+//BACKGROUND SVGS
+

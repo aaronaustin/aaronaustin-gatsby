@@ -1,0 +1,85 @@
+@import "../../../theme/vars.scss";
+.mainMenuContainer {
+  position: fixed;
+  overflow:hidden;
+  top:0;
+  right:0;
+  left:0;
+  height: 100vh;
+  z-index: 994;
+  padding-top: 80px;
+  .mainMenuInner {
+    display: block;
+    padding: .5rem;
+    text-align: center;
+    position: relative;
+    max-width: $navbar-max-width;
+    margin: auto;
+    
+    &.active {
+      .row {
+        opacity:1;
+      }
+    }
+    .col {
+      padding: 0 0.1rem 0.1rem;
+      padding-bottom: 0.2rem;
+      text-align: center;
+      flex: 1 1 0%;
+    }
+    a {
+      display:block;
+      border:none;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 15px;
+      text-align: center;
+      cursor: pointer;
+      color: #fff;
+      h1 {
+        color: #fff;
+        margin: 1rem 0;
+        font-family: 'Oswald';
+      }
+      &.active {
+        background-color: rgba(255,255,255,0.1);
+      }
+      &:hover {
+        background-color: rgba(255,255,255,0.1);
+      }
+    }
+  }
+}
+.mainMenuBackground {
+  position: fixed;
+  background: transparent;
+  z-index: 996;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.mainMenuContainer {
+  background: $primary-color;
+  transition: background .15s;
+  .mainMenuInner {
+    opacity:1;
+    transform: translateY(0);
+    transition: opacity .2s .2s, transform .2s .2s;
+  }
+  &.enter {
+    background: transparent;
+    .mainMenuInner {
+      transform: translateY(-20px);
+      opacity:0;
+    }
+  }
+  &.exit {
+    background: transparent;
+    transition: background .1s;
+    .mainMenuInner {
+      opacity:0;
+      transition:opacity .2s 0s;
+    }
+  }
+}

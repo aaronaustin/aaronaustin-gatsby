@@ -1,0 +1,105 @@
+@import "../../theme/vars.scss";
+    .container {
+            position: relative;
+            width: calc(100% - .5rem);
+            
+            padding: 1.25rem 0 .25rem 0;
+            display:flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            input, textarea {
+                border: none;
+                border-bottom: 1px solid #bbb;
+                border-radius: 0;
+                background-color: transparent;
+                flex-grow: 1;
+                margin: 0;
+                padding:0;
+                line-height: 1.5rem;
+                box-shadow: none;
+                min-height: 1.5rem;
+                width: 100%;
+                resize: vertical;
+                & ~ .line {
+                    width: 0;
+                    height: 2px;
+                    left: 0;
+                    right:0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top:-1px;
+                    background-color: $primary-color;
+                    transition: width .25s ease-in-out;
+                }
+                & ~ label {
+                    position:absolute;
+                    top: 1.25rem;
+                    left:0;
+                    transform-origin: left;
+                    transition: transform .25s ease-in-out;
+                    color: $gray-text;
+                    pointer-events: none;
+                }
+                &:focus {
+                    & ~ .line {
+                        width: 100%;
+                    }
+                    & ~ label {
+                        color: $primary-color;
+                        transform: translate(0rem,-1.35rem) scale(.8);
+                    }
+                }
+                &:not(:placeholder-shown) {
+                    & ~ label {
+                        transform: translate(0rem,-1.35rem) scale(.8);
+                    }
+                }
+                &:invalid:not(:focus):not(:placeholder-shown) {
+                    border-color: $red;
+                    & ~ .line {
+                        background-color: $red;
+                    }
+                    & ~ label {
+                        color: $red;
+                        transform: translate(0rem,-1.35rem) scale(.8);
+                    }
+                }
+                &:invalid:not(:placeholder-shown) {
+                    & ~ .notification {
+                        visibility: visible;
+                    }
+                }
+            }
+            svg {
+                flex-grow: 0;
+                flex-shrink: 0;
+                fill: #ccc;
+            }
+            .close {
+                display:none;
+                cursor: pointer;
+                &:hover {
+                    background-color: #ccc;
+                    border-radius: 50%;
+                    svg {
+                        fill:#fff;
+                    }
+                }
+            }
+            .icon {
+                margin-right: .5rem;
+                display: inline-flex;
+            }
+            .notification {
+                visibility: hidden;
+                order: 5;
+                font-size: .7rem;
+                line-height: 1rem;
+                margin: .25rem 0;
+                color: $gray-text;
+                width: 100%;
+                color: $red;
+            }
+        }

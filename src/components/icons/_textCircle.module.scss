@@ -1,0 +1,30 @@
+@import "../../theme/_vars";
+
+.container {
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-color: #ccc;
+    color: white;
+    overflow: hidden;
+    user-select: none;
+    text-transform: uppercase;
+    margin: .25rem;
+    &.blue {
+        background-color: $blue;
+    }
+    &.purple {
+        background-color: $purple;
+    }
+    &.yellow {
+        background-color: $yellow;
+    }
+    &.green {
+        background-color: $green;
+    }
+    &.red {
+        background-color: $red;
+    }
+}

@@ -1,0 +1,70 @@
+@import "../../../theme/vars.scss";
+.menuIconWrapper {
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $primary-color;
+    transform: scale(0);
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index: -1;
+    opacity:1;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity .25s, transform .25s;
+    border-radius: 50%;
+  }
+  &.active {
+    &:before {
+      transform: scale(6);
+      opacity:0;
+    }
+  }
+  
+  .menuIcon {
+    display:block;
+    transition: all .3s;
+    .menuBarTop {
+      transform: translateX(0);
+      transition: all .3s;
+    }
+    .menuBarMidA {
+      transform: rotate(0);
+      transform-origin: 12px 12px;
+      transition: all .3s;
+    }
+    .menuBarMidB {
+      transform: rotate(0);
+      transform-origin: 12px 12px;
+      transition: all .3s;
+    }
+    .menuBarBot {
+      transform: translateX(0);
+      transition: all .3s;
+    }
+    &.active {
+      .menuBarTop {
+        transform: translateX(100%);
+        // fill: #fff;
+      }
+      .menuBarMidA {
+        transform: rotate(135deg);
+        // fill: #fff;
+      }
+      .menuBarMidB {
+        transform: rotate(-135deg);
+        // fill: #fff;
+      }
+      .menuBarBot {
+        transform: translateX(-100%);
+        // fill: #fff;
+      }
+    }
+  }
+}

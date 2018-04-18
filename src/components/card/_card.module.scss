@@ -1,0 +1,57 @@
+@import "../../theme/vars.scss";
+
+.container {
+  position: relative;
+  box-shadow: $basic-shadow;
+  // border: 2px solid #000;
+  border-radius: 4px;
+  overflow:hidden;
+  margin: .5rem;
+  width: calc((920px - (3 * 1rem + 40px)) / 3 );
+  transition:box-shadow .25s;
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
+  a {
+    color: inherit;
+    text-decoration:none;
+    .inner {
+      display: flex;
+      flex-flow: column;
+      height: 100%;
+      .image {
+        img {
+          margin:0;
+        }
+      }
+      .description {
+        display:flex;
+        flex-direction: column;
+        padding: 0 20px 20px 16px;
+        overflow:hidden;
+        height: 100%;
+        .date {
+          align-self: flex-start;
+          margin-top: auto;
+          margin-bottom:0;
+          // background-color: #ccc;
+          // color: #fff;
+          // padding: 4px 8px;
+          // border-radius: 2rem;
+        }
+        .category {
+          display: flex;
+          svg {
+            margin-right: .25rem;
+            fill: $gray-text;
+          }
+        }
+        h6 {
+          text-transform: uppercase;
+
+        }
+      }
+    }
+
+  }
+}

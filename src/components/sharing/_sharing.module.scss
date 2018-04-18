@@ -1,0 +1,19 @@
+@import "../../theme/vars.scss";
+
+.container {
+  display:flex;
+  align-items: flex-start;
+  svg {
+    margin: .2rem 0 .2rem 1rem;
+    opacity: .6;
+    path {
+      fill: $gray-text;
+    }
+    &:hover {
+      opacity: 1;
+      path {
+        fill: inherit;
+      }
+    }
+  }
+}

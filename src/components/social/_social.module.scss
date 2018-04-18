@@ -1,0 +1,14 @@
+@import "../../theme/vars.scss";
+
+.container {
+  display:flex;
+  svg {
+    fill: #fff !important;
+    opacity: .6;
+    margin: 0;
+    margin: .25rem;
+    &:hover {
+      opacity: 1;      
+    }
+  }
+}

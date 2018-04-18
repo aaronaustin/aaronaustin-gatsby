@@ -1,0 +1,12 @@
+@import "../../theme/vars.scss";
+
+.container {
+  display:block;
+  .linkWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      margin-bottom: .5rem;
+    }
+  }
+}

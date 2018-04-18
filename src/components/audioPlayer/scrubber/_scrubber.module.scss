@@ -1,0 +1,36 @@
+@import "../../../theme/vars.scss";
+.container {
+  position: absolute;
+  opacity:0;
+  left: 28px;
+  right: 28px;
+  bottom: calc(100% + 14px);
+  transform: translateY(100%);
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+  .time {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-family: 'Oswald';
+    text-shadow: 1px 1px 1px #000;
+  }
+  .scrubberWrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    width:100%;
+    height: 10px;
+    cursor: col-resize;
+    .scrubber {
+      height: 10px;
+      background-color: #fff;
+      z-index: 1;
+      position: absolute;
+      height: 10px;
+      left: 0;
+      right:0;
+    }
+  }
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

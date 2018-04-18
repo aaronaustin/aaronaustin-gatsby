@@ -1,0 +1,27 @@
+@import '../../theme/_vars';
+
+.container {
+  margin-top: 1.6rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px dashed #ddd;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: .25rem .5rem;
+    svg {
+      margin-right: .5rem;
+    }
+    &:hover {
+      color: $primary-color;
+      svg {
+        fill: $primary-color;
+      }
+    }
+  }
+}

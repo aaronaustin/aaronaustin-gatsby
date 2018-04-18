@@ -1,0 +1,35 @@
+.btn {
+    text-transform: uppercase;
+    background-color: transparent;
+    color: $primary-color;
+    border:2px solid $primary-color;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    &.active, &.solid {
+        background-color: $primary-color;
+        color: #fff;
+    }
+    &.inverse {
+        color: #fff;
+        border: 2px solid #fff;
+    }
+    &.flat {
+        margin:2px;
+        border:0;
+        &:hover {
+            border-bottom: 2px solid #fff;
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+    }
+    &.icon {
+        display: flex;
+        svg {
+            fill: #fff;
+            margin-left: -.5rem;
+            margin-right: .5rem;
+        }
+    }
+
+}

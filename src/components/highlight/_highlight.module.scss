@@ -1,0 +1,55 @@
+@import "../../theme/vars.scss";
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "highlightLeft" 
+    "highlightRight"
+    "main";
+  grid-gap: 1rem;
+  .highlights {
+    display: grid;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 4px;
+    &:first-child {
+      grid-area: highlightLeft;
+    }
+    &:nth-child(2) {
+      grid-area: highlightRight;
+      font-style: italic;
+      opacity: .6;
+    }
+    p:before {
+      content: "\201C";
+      font-size: 4rem;
+      position: absolute;
+      margin-left: -2rem;
+      line-height: 1;
+      color: $gray;
+    }
+    p:after {
+      content: "\201D";
+      font-size: 4rem;
+      position: absolute;
+      margin-left: .25rem;
+      line-height: 1;
+      color: $gray;
+    }
+  }
+  .main {
+    grid-area: main;
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
+
+@include sm {
+  .container {
+    grid-template-areas:
+      "highlightLeft highlightRight"
+      "main main"
+  }
+}

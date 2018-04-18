@@ -1,0 +1,78 @@
+@import "../../theme/vars.scss";
+
+.playButton {
+  position: relative;
+  background-color: $primary-color;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  outline: none;
+  border: none;
+  padding: 0;
+  box-shadow: $big-shadow;
+  z-index: 100;
+  cursor: pointer;
+  transition: box-shadow .35s;
+  svg {
+      fill: #fff;
+      width: 56px;
+      height: 56px;
+      animation: iconClicked .25s both;
+  }
+  &:before {
+      content: "";
+      position: absolute;
+      background-color: $primary-color;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      z-index: -1;
+      opacity:0;
+      border-radius: 50%;
+      pointer-events: none;
+      user-select: none;
+      
+  }
+  &.clicked{
+    animation: iconClicked .25s both;
+    &:before {
+      animation: buttonClicked .25s forwards;
+    }
+  }
+  &.waiting {
+    &:after {
+      content: "";
+      position: absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      z-index: -1;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.5);
+      // background: conic-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+      pointer-events: none;
+      user-select: none;
+      // transform: scale(1.2)
+      animation: waiting 1s infinite ease-in-out;
+    }
+  }
+  &:hover {
+      box-shadow: $hover-shadow, inset 0 6px 16px 0 rgba(255,255,255,.2);
+  }
+}
+@keyframes iconClicked {
+  0%   { transform: scale(.9); }
+  100% { transform: scale(1); }
+}
+@keyframes buttonClicked {
+    0%   { transform: scale(0); opacity: 0; }
+    50%   { opacity: .4; }
+    100% { transform: scale(4); opacity: 0; }
+}
+@keyframes waiting {
+    0%   { transform: scale(1); opacity: 0; }
+    50%  { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}

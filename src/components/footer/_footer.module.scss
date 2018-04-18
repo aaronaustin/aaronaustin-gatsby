@@ -1,0 +1,85 @@
+@import "../../theme/vars.scss";
+
+.container {
+    background-color: $footer-color;
+    color: #fff;
+    svg {
+        margin-top: -1px;
+    }
+    .contentWrapper {
+        display:grid;
+        grid-gap: 1.6rem;
+        max-width: $header-max-width;
+        align-items: center;
+        justify-items: center;
+        margin: auto;
+        padding: 0 $nav-side-padding 4rem $nav-side-padding ;
+        grid-template-areas: 
+            "links"
+            "social"
+            "copy"
+            "power";
+        .links {
+            grid-area: links;
+            display:flex;
+            justify-content: space-between;
+        }
+        .social {
+            grid-area: social;
+            justify-content: space-between;
+            align-self: start;
+            display:flex;
+            justify-content: space-between;
+            svg {
+                fill: rgba(255,255,255,0.85);
+                margin: .2rem .5rem;
+                &:hover {
+                    fill: #fff;
+                }
+            }
+        }
+        .copy {
+            grid-area: copy;
+            color: rgba(255,255,255,0.5);
+            p {
+                margin-bottom: 0;
+            }
+        }
+        .power {
+            grid-area: power;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 1fr);
+            grid-gap: 1rem;           
+                img {
+                    margin-bottom: 0;
+                }
+            
+        }
+    }
+    
+}
+@include sm {
+      .container {
+          .contentWrapper {
+               grid-template-areas: 
+                    "links social"
+                    "copy copy"
+                    "power power";
+                .links {
+                    justify-self: start;
+                }
+                .social {
+                    justify-self: flex-end;
+                }
+                .power {
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a {
+                        padding: 0 1rem;
+                    }
+              
+                }
+          }
+      } 
+}
