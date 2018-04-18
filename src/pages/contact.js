@@ -32,6 +32,7 @@ class ContactPage extends React.Component {
             <h1>Get in touch</h1>
             <HTMLContent content={page.body.childMarkdownRemark.html}/>
             <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact" />
               <InputField name={'name'} label={'Your Name'} notification={'Please enter your name'}/>
               <InputField name={'email'} label={'Your Email'} type={'email'} notification={'Please enter a valid email'}/>
               <InputField name={'message'} label={'Message'} type={'textarea'} notification={'Please enter a message'}/>
