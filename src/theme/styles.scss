@@ -56,6 +56,16 @@ section {
     padding-top: 1.61rem;
     margin:auto;
   }
+  &.invade-header {
+    margin-top: -100px;
+    background-color: #fff;
+    box-shadow: $big-shadow;
+    position: relative;
+    border-radius: 4px;
+    padding-top: 1.61rem;
+    padding-bottom: 20px;
+
+  }
 }
 .cardGroup {
   display:flex;

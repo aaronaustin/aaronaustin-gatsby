@@ -28,7 +28,7 @@ class ContactPage extends React.Component {
         <Hero image={page.image.sizes} />
         
         <section className="content">
-          <section className="width-xs">
+          <section className="width-xs invade-header">
             <h1>Get in touch</h1>
             <HTMLContent content={page.body.childMarkdownRemark.html}/>
             <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
