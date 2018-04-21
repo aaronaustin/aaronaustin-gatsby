@@ -101,7 +101,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPosts(limit: 10){
+    allContentfulPosts(limit: 10, sort: {fields: [publishDate], order: DESC}){
       edges {
         node {
           id

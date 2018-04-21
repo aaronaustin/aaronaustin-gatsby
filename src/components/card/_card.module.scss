@@ -27,17 +27,15 @@
       .description {
         display:flex;
         flex-direction: column;
-        padding: 0 20px 20px 16px;
+        padding: 1rem;
         overflow:hidden;
         height: 100%;
         .date {
           align-self: flex-start;
           margin-top: auto;
           margin-bottom:0;
-          // background-color: #ccc;
-          // color: #fff;
-          // padding: 4px 8px;
-          // border-radius: 2rem;
+          padding-top: 1rem;
+
         }
         .category {
           display: flex;

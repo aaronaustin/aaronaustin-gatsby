@@ -58,9 +58,6 @@ const options = {
         // textTransform: 'uppercase',
         fontSize: rhythm(1.2),
       },
-      '.card div': {
-        marginBottom: rhythm(1 / 3),
-      },
       '.listItem h6': {
         color: '#888',
         marginBottom: rhythm(1 / 2),
