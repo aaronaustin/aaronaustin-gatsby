@@ -5,8 +5,13 @@ import IconsBrand from '../icons/iconsBrand';
 
 const Sharing = (props) => {
     const baseUrl = "http://aaronaustin.com";
-    const fbBase = "https://www.facebook.com/sharer.php?u=";
+    const fbAppId = "1773314012731497";
+    // const fbBase = "https://www.facebook.com/sharer.php?u=";
     const twBase = "https://twitter.com/intent/tweet?url=";
+    const fbBase = "https://www.facebook.com/dialog/share?app_id=" + fbAppId + "&display=popup&href="
+
+  // https://www.facebook.com/dialog/share?app_id={app_id}&display=popup&href={ url }& redirect_uri={ redirect_url }
+
     
     const twText = "&text=" + encodeURIComponent(props.title);
     const twHash = "&hashtags=music,folk";
