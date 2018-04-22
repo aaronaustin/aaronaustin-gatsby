@@ -5,7 +5,7 @@ module.exports = {
     image: '',
     logo: '',
     twitter: '@bootlegpreacher',
-    fbAppID: '',
+    fbAppID: '1773314012731497',
 
     API_ENDPOINT: '',
     CONFIRM_PAGE: '',

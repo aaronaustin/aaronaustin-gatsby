@@ -4,7 +4,7 @@ import styles from './_sharing.module.scss'
 import IconsBrand from '../icons/iconsBrand';
 
 const Sharing = (props) => {
-    const baseUrl = "http://aaronaustin.com";
+    const baseUrl = "http://www.aaronaustin.com";
     const fbAppId = "1773314012731497";
     // const fbBase = "https://www.facebook.com/sharer.php?u=";
     const twBase = "https://twitter.com/intent/tweet?url=";
