@@ -12,7 +12,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: 100vw;
     height: calc(100vh - #{$navbar-height});
     text-align: center;
     position: relative;
