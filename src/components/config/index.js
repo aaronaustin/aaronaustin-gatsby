@@ -1,7 +1,7 @@
 module.exports = {
     title: 'AARON AUSTIN · Blah blah.',
     description: '',
-    url: 'https://aaronaustin.com',
+    url: 'http://www.aaronaustin.com',
     image: '',
     logo: '',
     twitter: '@bootlegpreacher',
