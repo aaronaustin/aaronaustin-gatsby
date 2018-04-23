@@ -16,7 +16,7 @@ const Sharing = (props) => {
   const twText = "&text=" + encodeURIComponent(props.title);
   const twHash = "&hashtags=music,folk";
 
-  const fbShareUrl = fbBase + encodeURIComponent(config.url + props.shareUrl);
+  const fbShareUrl = fbBase + encodeURIComponent(config.url + props.shareUrl +"/");
   const twShareUrl = twBase + encodeURIComponent(config.url + props.shareUrl) + twText + twHash;
 
   console.log(props);
